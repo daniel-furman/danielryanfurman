@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="maintained-by" content="Daniel Furman">
     <meta name="author" content="Daniel Furman">
-    <meta name="keywords" content="Daniel Furman, Research">
+    <meta name="keywords" content="Daniel Furman">
 
-    <title>Daniel's Research</title>
+    <title>Daniel's Website</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
@@ -27,10 +27,14 @@
 <body>
     <header>
         <nav>
-            <h1>Daniel's Research</h1>
+            <h1>Daniel's Website</h1>
             <div style="display: flex; align-items: center;">
-                <a href="index.html">Home</a>
+                <a href="">Home</a>
                 <a href="research.html">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#software">Software</a>
+                <a href="#blog">Blog</a>
+                <a href="#misc">Misc</a>
                 <div class="theme-switch-wrapper">
                     <label class="theme-switch" for="checkbox">
                         <input type="checkbox" id="checkbox" />
@@ -46,40 +50,28 @@
 
     <div class="container">
         <main>
-            <section class="research-summary">
-                <h2>Research Summary</h2>
-                <p>My research focuses on the application of AI/ML to solve real-world problems.</p>
-            </section>
-
-            <section class="current-projects">
-                <h2>Current Topics</h2>
-                <ul>
-                    <li>
-                        <p>Building LLM agents for email and text communication channels</p>
-                    </li>
-                    <li>
-                        <p>Evaluation of LLMs, with an emphasis on multilingual capabilities</p>
-                    </li>
-                    <li>
-                        <p>Semantic segmentation in high-resolution, multiband drone imagery</p>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="publications">
-                <h2>Selected Publications</h2>
-                <ul>
-                    <li>
-                        <cite>Tim Schott, Daniel Furman, Shreshta Bhat. Polyglot or Not? Measuring Multilingual Encyclopedic Knowledge in Foundation Models. Empirical Methods in Natural Language Processing, 2023</cite> (<a href="https://aclanthology.org/2023.emnlp-main.691/">paper</a>)
-                    </li>
-                    <!-- Add more publications as needed -->
+            <section class="about">
+                <h2>Research</h2>
+                <p>Here's some research topics I work(ed) on:</p>
+                <ul class="about">
+                  <li>
+                  Evaluation of generative language models (2021 - present)
+                  </li>
+                  <li>
+                   Semantic segmentation in high-resolution, multiband drone imagery (2021 - 2022)
+                  </li>
+                  <li>
+                   Ecological applications for geospatial range forecasting (2018 - 2021)
+                  </li>
+                  <li>
+                   Ice rheology and its micro-physics (2017 - 2020)
+                  </li>
                 </ul>
             </section>
         </main>
     </div>
 
     <script>
-        // Same JavaScript code as in index.html for theme switching
         const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
         const currentTheme = localStorage.getItem('theme');
 
