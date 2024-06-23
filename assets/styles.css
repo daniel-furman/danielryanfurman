@@ -7,6 +7,9 @@
   --link-color: #2980b9;
   --link-hover-color: #1c638e;
   --block-quote-background-color: #f9f9f9;
+  --block-quote-color:#555;
+  --block-quote-border-left-color:#888;
+  --block-quote-footer-color:#888;
 }
 
 .dark-mode {
@@ -18,6 +21,9 @@
   --link-color: #5dade2;
   --link-hover-color: #85c1e9;
   --block-quote-background-color: #2a2a2a;
+  --block-quote-color: #d0d0d0;
+  --block-quote-border-left-color:#555;
+  --block-quote-footer-color: #a0a0a0;
 }
 
 body {
@@ -80,40 +86,6 @@ main {
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
   margin-top: 2rem;
-}
-
-blockquote {
-  font-style: italic;
-  border-left: 3px solid #888;
-  padding: 10px 20px;
-  margin: 20px 0;
-  background-color: var(--block-quote-background-color);
-  color: #555;
-  font-size: 1.1em;
-  line-height: 1.6;
-  font-family: 'Georgia', serif;
-}
-
-blockquote p {
-  margin: 0 0 10px 0;
-}
-
-blockquote footer {
-  font-style: normal;
-  text-align: right;
-  font-size: 0.9em;
-  color: #888;
-}
-
-/* Dark mode styles */
-.dark-mode blockquote {
-  background-color: #2a2a2a;
-  color: #d0d0d0;
-  border-left-color: #555;
-}
-
-.dark-mode blockquote footer {
-  color: #a0a0a0;
 }
 
 .profile, .about {
@@ -192,6 +164,29 @@ h1, h2 {
   background-color: white;
   transition: .4s;
   border-radius: 50%;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 3px solid var(--block-quote-border-left-color);
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: var(--block-quote-background-color);
+  color: var(--block-quote-color);
+  font-size: 1.1em;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+}
+
+blockquote p {
+  margin: 0 0 10px 0;
+}
+
+blockquote footer {
+  font-style: normal;
+  text-align: right;
+  font-size: 0.9em;
+  color: var(--block-quote-footer-color);
 }
 
 input:checked + .slider {

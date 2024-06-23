@@ -1,12 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="maintained-by" content="Daniel Furman">
     <meta name="author" content="Daniel Furman">
-    <meta name="keywords" content="Daniel Furman">
+    <meta name="keywords" content="Daniel Furman, Research">
+
+    <title>Daniel's Website</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
@@ -14,44 +15,96 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="assets/site.webmanifest">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="assets/styles.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-    <title>Daniel Furman</title>
-    <style>
-    </style>
-  </head>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <body>
-    <div class="container mt-5 mb-5">
-      <div class="row">
-        <div class="col">
-          <h2>Daniel Furman</a></h2>
-          <hr>
-        </div>
-      </div>
-      <div class="row pt-md-5">
-        <div class="col-md-2 mb-2">
-          <nav class="nav flex-column nav-pills">
-            <a class="nav-item nav-link" href="./index.html">Home</a>
-            <a class="nav-item nav-link" href="./research.html">Research</a>
-            <a class="nav-item nav-link" href="./publications.html">Publications</a>
-            <a class="nav-item nav-link" href="./software.html">Software</a>
-            <a class="nav-item nav-link active" href="./blog.html">Blog</a>
-            <a class="nav-item nav-link" href="./misc.html">Misc</a>
-          </nav>
-        </div>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Daniel Furman</h1>
+            <div style="display: flex; align-items: center;">
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="blog.html">Blog</a>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider">
+                            <i class="fas fa-sun icon sun"></i>
+                            <i class="fas fa-moon icon moon"></i>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-        <div class="col-md-8">
-          <main class="shadow p-3 mb-5 bg-white rounded" style="padding:10px">
+    <div class="container">
+        <main>
+            <section class="about">
+                <h2>Blog</h2>
+                <p>I occasionally write blog posts on Medium.</p>
+            </section>
 
+            <section class="about">
+                <h2>Posts</h2>
+                <ul>
+                    <li>
+                        <p>Applying chat templates to generative LM evaluation tests</p>
+                    </li>
+                </ul>
+                <h2>Selected Publications</h2>
+                <ul>
+                    <li>
+                        Daniel Furman, Tim Schott, Shreshta Bhat. <a href="https://aclanthology.org/2023.emnlp-main.691/" target="_blank">Polyglot or Not? Measuring Multilingual Encyclopedic Knowledge in Foundation Models</a>. Empirical Methods in Natural Language Processing (2023)
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Same JavaScript code as in index.html for theme switching
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+                document.documentElement.classList.add('dark-mode');
+            }
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                document.documentElement.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                document.documentElement.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }    
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
+</body>
+</html>
 
 <h4>Blog</h4>
 
 <ul>
   <li>
-    Applying chat templates to generative LM evaluation tests
+    
     (<a href="https://towardsdatascience.com/evaluations-with-chat-formats-7604067023c9">link</a>) - Feb 2024
   </li>
   <li>
