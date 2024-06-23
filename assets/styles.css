@@ -4,6 +4,8 @@
   --bg-color: #f4f4f4;
   --card-bg: #fff;
   --header-bg: #fff;
+  --link-color: #2980b9; /* New link color for light mode */
+  --link-hover-color: #1c638e; /* New link hover color for light mode */
 }
 
 .dark-mode {
@@ -12,6 +14,8 @@
   --bg-color: #1a1a1a;
   --card-bg: #2c2c2c;
   --header-bg: #252525;
+  --link-color: #5dade2; /* New link color for dark mode */
+  --link-hover-color: #85c1e9; /* New link hover color for dark mode */
 }
 
 body {
@@ -46,15 +50,27 @@ nav {
   padding: 1rem 2rem;
 }
 
+/* Add this new rule for links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Update the nav links to use the new link colors */
 nav a {
-  color: var(--text-color);
+  color: var(--link-color);
   text-decoration: none;
   margin-left: 1.5rem;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--primary-color);
+  color: var(--link-hover-color);
 }
 
 main {
