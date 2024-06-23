@@ -103,6 +103,17 @@ blockquote footer {
   color: #888;
 }
 
+/* Dark mode styles */
+[data-theme='dark'] blockquote {
+  background-color: #2a2a2a;
+  color: #d0d0d0;
+  border-left-color: #555;
+}
+
+[data-theme='dark'] blockquote footer {
+  color: #a0a0a0;
+}
+
 .profile, .about {
   background-color: var(--card-bg);
   border-radius: 8px;
