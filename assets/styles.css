@@ -4,8 +4,9 @@
   --bg-color: #f4f4f4;
   --card-bg: #fff;
   --header-bg: #fff;
-  --link-color: #2980b9; /* New link color for light mode */
-  --link-hover-color: #1c638e; /* New link hover color for light mode */
+  --link-color: #2980b9;
+  --link-hover-color: #1c638e;
+  --block-quote-background-color: #f9f9f9;
 }
 
 .dark-mode {
@@ -14,8 +15,9 @@
   --bg-color: #1a1a1a;
   --card-bg: #2c2c2c;
   --header-bg: #252525;
-  --link-color: #5dade2; /* New link color for dark mode */
-  --link-hover-color: #85c1e9; /* New link hover color for dark mode */
+  --link-color: #5dade2;
+  --link-hover-color: #85c1e9;
+  --block-quote-background-color: #2a2a2a;
 }
 
 body {
@@ -85,7 +87,7 @@ blockquote {
   border-left: 3px solid #888;
   padding: 10px 20px;
   margin: 20px 0;
-  background-color: #f9f9f9;
+  background-color: var(--block-quote-background-color);
   color: #555;
   font-size: 1.1em;
   line-height: 1.6;
