@@ -104,13 +104,13 @@ blockquote footer {
 }
 
 /* Dark mode styles */
-[data-theme='dark'] blockquote {
+.dark-mode blockquote {
   background-color: #2a2a2a;
   color: #d0d0d0;
   border-left-color: #555;
 }
 
-[data-theme='dark'] blockquote footer {
+.dark-mode blockquote footer {
   color: #a0a0a0;
 }
 
