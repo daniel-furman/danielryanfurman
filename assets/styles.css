@@ -82,25 +82,25 @@ main {
 
 blockquote {
   font-style: italic;
-  border-left: 4px solid #4a4a4a;
-  padding-left: 20px;
+  border-left: 3px solid #888;
+  padding: 10px 20px;
   margin: 20px 0;
-  color: #666;
   background-color: #f9f9f9;
-  padding: 15px;
-  border-radius: 5px;
+  color: #555;
+  font-size: 1.1em;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
 }
 
 blockquote p {
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 
 blockquote footer {
   font-style: normal;
-  font-size: 0.9em;
   text-align: right;
+  font-size: 0.9em;
   color: #888;
-  margin-top: 10px;
 }
 
 .profile, .about {
