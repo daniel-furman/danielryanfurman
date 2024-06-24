@@ -235,3 +235,44 @@ input:checked + .slider .moon {
       grid-template-columns: 1fr;
   }
 }
+
+.info-bubble {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.info-bubble:hover::after {
+  content: attr(data-description);
+  display: block;
+  position: absolute;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.info-bubble:hover::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #333;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
