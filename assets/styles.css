@@ -40,6 +40,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  margin-top: 1rem;
 }
 
 header {
@@ -101,6 +102,11 @@ main {
   height: 150px;
   border-radius: 50%;
   margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  margin-top: 0;
 }
 
 h1, h2 {
@@ -120,7 +126,7 @@ h1, h2 {
 }
 
 .social-icons a:hover {
-  color: var(--primary-color);
+  color: var(--link-hover-color);
 }
 
 .theme-switch-wrapper {
