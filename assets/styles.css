@@ -27,7 +27,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: courier;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -44,6 +44,7 @@ body {
 }
 
 header {
+  font-family: courier;
   background-color: var(--header-bg);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: sticky;
@@ -106,10 +107,12 @@ main {
 }
 
 .about h2 {
+  font-family: courier;
   margin-top: 0;
 }
 
 h1, h2 {
+  font-family: courier;
   color: var(--primary-color);
 }
 
@@ -215,7 +218,7 @@ blockquote {
   color: var(--block-quote-color);
   font-size: 1.1em;
   line-height: 1.6;
-  font-family: 'Georgia', serif;
+  font-family: courier;
 }
 
 blockquote p {
@@ -227,58 +230,11 @@ blockquote footer {
   text-align: right;
   font-size: 0.9em;
   color: var(--block-quote-footer-color);
+  font-family: courier;
 }
 
 @media (max-width: 768px) {
   main {
       grid-template-columns: 1fr;
   }
-}
-
-.info-icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: none;
-}
-
-.info-icon:hover {
-  background-color: var(--link-hover-color);
-}
-
-.info-bubble {
-  display: none;
-  background-color: var(--card-bg);
-  border-radius: 8px;
-  padding: 1rem;
-  margin-top: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
-.info-bubble.active {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.info-bubble p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--text-color);
-}
-
-* {
-  font-family: courier;
 }
